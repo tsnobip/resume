@@ -1,0 +1,31 @@
+{
+  "name": "resume",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "parcel build src/index.html",
+    "dev": "parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pdf",
+    "resume",
+    "react"
+  ],
+  "author": "Paul Tsnobiladzé",
+  "license": "MIT",
+  "dependencies": {
+    "@react-pdf/renderer": "^2.0.0-beta.14",
+    "@react-pdf/styled-components": "^1.4.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.0",
+    "@babel/preset-env": "^7.12.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "parcel-bundler": "^1.12.4"
+  },
+  "main": "index.js"
+}
