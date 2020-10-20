@@ -2,8 +2,9 @@
   "name": "resume",
   "version": "0.1.0",
   "scripts": {
-    "build": "parcel build src/index.html",
-    "dev": "parcel src/index.html",
+    "build": "webpack",
+    "dev": "webpack-dev-server",
+    "watch": "webpack -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -23,9 +24,15 @@
     "@babel/core": "^7.12.0",
     "@babel/preset-env": "^7.12.0",
     "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "parcel-bundler": "^1.12.4"
+    "file-loader": "^6.1.1",
+    "html-webpack-plugin": "^4.5.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
   },
   "main": "index.js"
 }
