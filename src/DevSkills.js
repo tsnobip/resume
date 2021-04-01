@@ -31,8 +31,8 @@ const DevSkills = () => <View style={styles.card}>
         <Skill>Rescript</Skill>
         <Skill>React</Skill>
         <Skill>GraphQL/Relay</Skill>
-        <Skill>Serverless</Skill>
-        <Skill>Hasura</Skill>
+        <Skill>Serverless, Google Cloud Run</Skill>
+        <Skill>Hasura, PostGraphile</Skill>
         <Skill>AWS DevOps</Skill>
         <Skill>ElasticSearch</Skill>
         <Skill>Kotlin</Skill>

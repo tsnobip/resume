@@ -27,10 +27,10 @@ const Contribution = ({ url, children }) => <Link style={styles.skill} src={"!" 
 const DevSkills = () => <View style={styles.card}>
     <CategoryTitle>Main public contributions</CategoryTitle>
     <View style={styles.inner}>
-        <Contribution url="https://github.com/zth/reason-relay/pulls?q=author%3Atsnobip+is%3Apr">zth/reason-relay</Contribution>
+        <Contribution url="https://github.com/ocaml/ocaml-lsp/pull/112">ocaml/ocaml-lsp</Contribution>
+        <Contribution url="https://github.com/zth/rescript-relay/pulls?q=author%3Atsnobip+is%3Apr">zth/rescript-relay</Contribution>
         <Contribution url="https://github.com/rescript-lang/rescript-compiler/pulls?q=author%3Atsnobip+is%3Apr">rescript-lang/rescript-compiler - Belt</Contribution>
         <Contribution url="https://github.com/wearegoat/bs-prosemirror/pulls?q=author%3Atsnobip+is%3Apr">wearegoat/bs-prosemirror</Contribution>
-        <Contribution url="https://github.com/ocaml/ocaml-lsp/pull/112">ocaml/ocaml-lsp</Contribution>
         <Contribution url="https://github.com/reasonml-community/bs-webapi-incubator/pull/165">bs-webapi-incubator</Contribution>
     </View>
 </View>
