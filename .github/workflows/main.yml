@@ -34,4 +34,4 @@ jobs:
         with:
           name: result-pdf
           path: |
-            dist/server/Résumé_2020_Paul_Tsnobiladzé.pdf
+            dist/server/Résumé_2021_Paul_Tsnobiladzé.pdf
