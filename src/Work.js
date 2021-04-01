@@ -30,7 +30,7 @@ const Work = () => <View>
         <Text>duration in years / time frame</Text><Text>location</Text>
     </View>
     <View style={styles.inner}>
-        <WorkExp length={0.5} timeframe="oct 2020 - today" title="Software engineer" company="Dialo" location="Paris, FR" >
+        <WorkExp length={0.5} timeframe="oct 2020 - today" title="Software engineer" company="Dialo.ai" location="Paris, FR" >
             Build a platform that allows to design a new generation of voice user interfaces. Joined a team of experienced
             developers and designers to work on some of the most bleeding edge technologies out-there, OCaml, Rescript,
             serverless services, Natural Language Processing...
