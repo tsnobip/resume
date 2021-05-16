@@ -45,7 +45,7 @@ const Bio = () =>
         <Image src={profilePic} style={styles.profilePic} />
         <Text style={styles.bio}>Product-centric developer.
         Functional Programming enthusiast.
-        5 years of experience as a CTO in startups.</Text>
+        6 years of experience as a CTO and a software engineer in startups.</Text>
     </View>
 
 
