@@ -26,22 +26,17 @@ const styles = StyleSheet.create({
 })
 
 
-const Education = () => <View style={styles.card}>
-    <CategoryTitle>Education</CategoryTitle>
+const Education = ({ title, trainings }) => <View style={styles.card}>
+    <CategoryTitle>{title}</CategoryTitle>
     <View style={styles.inner}>
-        <Training
-            title="Computer Engineer"
-            institution="École des Mines de St-Étienne, FR"
-            timeframe="2007 - 2013">
-            MSc in Computer Science, minor in Design
-            </Training>
-        <Training
-            title="MASTER: AI & DATA VIZ"
-            institution="Seoul National University, KR"
-            timeframe="aug 2011 - jan 2012">
-            Semester in Artificial Intelligence
-            and Data Visualization
-            </Training>
+        {trainings.map(({ title, institution, timeframe, details }) =>
+            <Training
+                key={title}
+                title={title}
+                institution={institution}
+                timeframe={timeframe}>
+                {details}
+            </Training>)}
     </View>
 </View>
 

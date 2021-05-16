@@ -1,9 +1,14 @@
 import React from "react"
 import ReactPDF from '@react-pdf/renderer';
-import Resume from "./Resume"
+import { Eng as Resume, Fr as CV } from "./versions"
 import path from "path"
 
-const outputPath = path.join(__dirname, "Résumé_2021_Paul_Tsnobiladzé.pdf")
+const engOutputPath = path.join(__dirname, "Résumé_2021_Paul_Tsnobiladzé.pdf")
 
-ReactPDF.render(<Resume />, outputPath)
-console.log("generated pdf at ", outputPath)
+ReactPDF.render(<Resume />, engOutputPath)
+console.log("generated Eng pdf at ", engOutputPath)
+
+const frOutputPath = path.join(__dirname, "CV_2021_Paul_Tsnobiladzé.pdf")
+
+ReactPDF.render(<CV />, frOutputPath)
+console.log("generated Fr pdf at ", frOutputPath)

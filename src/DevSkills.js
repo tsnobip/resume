@@ -23,19 +23,10 @@ const styles = StyleSheet.create({
 
 const Skill = ({ children }) => <Text style={styles.skill}>{children}</Text>
 
-const DevSkills = () => <View style={styles.card}>
-    <CategoryTitle>Tech stack</CategoryTitle>
+const DevSkills = ({ title, skills }) => <View style={styles.card}>
+    <CategoryTitle>{title}</CategoryTitle>
     <View style={styles.inner}>
-        <Skill>Functional Programming</Skill>
-        <Skill>OCaml/ReasonML</Skill>
-        <Skill>Rescript</Skill>
-        <Skill>React</Skill>
-        <Skill>GraphQL/Relay</Skill>
-        <Skill>Serverless, Google Cloud Run</Skill>
-        <Skill>Hasura, PostGraphile</Skill>
-        <Skill>AWS DevOps</Skill>
-        <Skill>ElasticSearch</Skill>
-        <Skill>Kotlin</Skill>
+        {skills.map(skill => <Skill key={skill}>{skill}</Skill>)}
     </View>
 </View>
 

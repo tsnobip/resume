@@ -1,7 +1,6 @@
 import React from "react"
 
 import { View, Text, Image, StyleSheet } from "@react-pdf/renderer"
-import profilePic from "../images/profile_pic_paul.jpg"
 import { defaultFontSize, defaultLineHeight } from "./Styles"
 
 const styles = StyleSheet.create({
@@ -37,15 +36,13 @@ const styles = StyleSheet.create({
 })
 
 
-const Bio = () =>
+const Bio = ({ firstName, lastName, title, profilePic, children }) =>
     <View >
-        <Text style={styles.firstName}>Paul</Text>
-        <Text style={styles.lastName}>Tsnobiladzé</Text>
-        <Text style={styles.jobTitle}>Computer engineer</Text>
+        <Text style={styles.firstName}>{firstName}</Text>
+        <Text style={styles.lastName}>{lastName}</Text>
+        <Text style={styles.jobTitle}>{title}</Text>
         <Image src={profilePic} style={styles.profilePic} />
-        <Text style={styles.bio}>Product-centric developer.
-        Functional Programming enthusiast.
-        6 years of experience as a CTO and a software engineer in startups.</Text>
+        <Text style={styles.bio}>{children}</Text>
     </View>
 
 

@@ -19,7 +19,6 @@ const styles = StyleSheet.create({
         fontFamily: "Roboto",
         fontWeight: "light",
         fontSize: defaultFontSize,
-        textTransform: "capitalize",
         color: lighterText,
         paddingBottom: "1mm"
     },

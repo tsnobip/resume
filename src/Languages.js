@@ -28,12 +28,10 @@ const Language = ({ level, children }) => <View style={styles.language}>
     <Text>{level}</Text>
 </View>
 
-const Languages = () => <View style={styles.card}>
-    <CategoryTitle>Languages</CategoryTitle>
+const Languages = ({ title, languages }) => <View style={styles.card}>
+    <CategoryTitle>{title}</CategoryTitle>
     <View style={styles.inner}>
-        <Language level="C2">French</Language>
-        <Language level="C2">English</Language>
-        <Language level="C1">Russian</Language>
+        {languages.map(({ language, level }) => <Language key={language} level={level}>{language}</Language>)}
     </View>
 </View>
 
