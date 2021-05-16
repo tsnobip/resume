@@ -31,7 +31,7 @@ const browser = {
     static: {
       publicPath: outputDir,
     },
-    dev: {
+    devMiddleware: {
       writeToDisk: true
     }
   },
@@ -39,7 +39,8 @@ const browser = {
     fallback: {
       "stream": require.resolve("stream-browserify"),
       "zlib": require.resolve("browserify-zlib"),
-      "assert": require.resolve("assert/")
+      "assert": require.resolve("assert/"),
+      "crypto": false
     }
   },
   module: {
