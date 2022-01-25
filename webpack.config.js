@@ -1,27 +1,27 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const outputDir = path.join(__dirname, 'dist/');
-const fork = require('child_process').fork;
-const webpack = require('webpack');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const outputDir = path.join(__dirname, "dist/");
+const fork = require("child_process").fork;
+const webpack = require("webpack");
 
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === "production";
 
 const browser = {
-  entry: './src/index.js',
-  mode: isProd ? 'production' : 'development',
+  entry: "./src/index.js",
+  mode: isProd ? "production" : "development",
   output: {
     path: outputDir,
-    filename: 'index.js',
-    publicPath: '/'
+    filename: "index.js",
+    publicPath: "/",
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
-      inject: false
+      template: "src/index.html",
+      inject: false,
     }),
     new webpack.ProvidePlugin({
-      Buffer: ['buffer', 'Buffer'],
-      process: 'process/browser',
+      Buffer: ["buffer", "Buffer"],
+      process: "process/browser",
     }),
   ],
   devServer: {
@@ -32,16 +32,17 @@ const browser = {
       publicPath: outputDir,
     },
     devMiddleware: {
-      writeToDisk: true
-    }
+      writeToDisk: true,
+    },
   },
   resolve: {
     fallback: {
-      "stream": require.resolve("stream-browserify"),
-      "zlib": require.resolve("browserify-zlib"),
-      "assert": require.resolve("assert/"),
-      "crypto": false
-    }
+      stream: require.resolve("stream-browserify"),
+      zlib: require.resolve("browserify-zlib"),
+      assert: require.resolve("assert/"),
+      buffer: require.resolve("buffer"),
+      crypto: false,
+    },
   },
   module: {
     rules: [
@@ -49,43 +50,43 @@ const browser = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
+          loader: "babel-loader",
+        },
       },
       {
         test: /\.(png|jpg|jpeg|gif|ttf)$/,
         use: [
           {
-            loader: "file-loader"
-          }
-        ]
-      }
-    ]
-  }
+            loader: "file-loader",
+          },
+        ],
+      },
+    ],
+  },
 };
 
-const nodeOutputDir = path.join(outputDir, "server")
+const nodeOutputDir = path.join(outputDir, "server");
 
 const node = {
-  entry: './src/Render.js',
-  mode: isProd ? 'production' : 'development',
-  target: 'node',
+  entry: "./src/Render.js",
+  mode: isProd ? "production" : "development",
+  target: "node",
   output: {
     path: nodeOutputDir,
-    filename: 'index.js',
-    publicPath: 'dist/server/'
+    filename: "index.js",
+    publicPath: "dist/server/",
   },
   plugins: [
     {
       apply: (compiler) => {
-        compiler.hooks.afterEmit.tap('AfterEmitPlugin', (compilation) => {
+        compiler.hooks.afterEmit.tap("AfterEmitPlugin", (compilation) => {
           fork(path.join(nodeOutputDir, "index.js"));
         });
-      }
-    }
+      },
+    },
   ],
   node: {
-    __dirname: false
+    __dirname: false,
   },
   module: {
     rules: [
@@ -93,19 +94,19 @@ const node = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
+          loader: "babel-loader",
+        },
       },
       {
         test: /\.(png|jpg|jpeg|gif|ttf)$/,
         use: [
           {
-            loader: "file-loader"
-          }
-        ]
-      }
-    ]
-  }
+            loader: "file-loader",
+          },
+        ],
+      },
+    ],
+  },
 };
 
 module.exports = [browser, node];
