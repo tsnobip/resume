@@ -24,7 +24,7 @@ const Resume = () => (
           title="Ingénieur Civil des Mines"
           profilePic={profilePic}
         >
-          Passionné de produit et de programmation fonctionnelle. 8 ans
+          Passionné de produit et de programmation fonctionnelle. 10 ans
           d'expérience en tant que CTO et ingénieur logiciel dans des startups.
         </Bio>
         <Contact
@@ -97,7 +97,7 @@ const Resume = () => (
           location="emplacement"
           workExps={[
             {
-              length: 1.3,
+              length: 2.5,
               timeframe: "oct. 2020 - auj",
               title: "Ingénieur logiciel",
               company: "Dialo.ai",

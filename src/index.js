@@ -10,7 +10,7 @@ const style = StyleSheet.create({ viewer: { height: "100vh" } });
 ReactDOM.render(
   <div>
     <PDFDownloadLink
-      fileName="Résumé_2022_Paul_Tsnobiladzé.pdf"
+      fileName="Résumé_2023_Paul_Tsnobiladzé.pdf"
       document={<Resume />}
     >
       Download here{" "}
@@ -18,7 +18,7 @@ ReactDOM.render(
     <PDFViewer width="100%" style={style.viewer}>
       <Resume />
     </PDFViewer>
-    <PDFDownloadLink fileName="CV_2022_Paul_Tsnobiladzé.pdf" document={<CV />}>
+    <PDFDownloadLink fileName="CV_2023_Paul_Tsnobiladzé.pdf" document={<CV />}>
       Download here{" "}
     </PDFDownloadLink>
     <PDFViewer width="100%" style={style.viewer}>

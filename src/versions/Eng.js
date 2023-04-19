@@ -24,7 +24,7 @@ const Resume = () => (
           title="Computer engineer"
           profilePic={profilePic}
         >
-          Product-centric developer. Functional Programming enthusiast. 8 years
+          Product-centric developer. Functional Programming enthusiast. 10 years
           of experience as a CTO and a software engineer in startups.
         </Bio>
         <Contact
@@ -97,7 +97,7 @@ const Resume = () => (
           location="location"
           workExps={[
             {
-              length: 1.3,
+              length: 2.5,
               timeframe: "Oct 2020 - Today",
               title: "Software engineer",
               company: "Dialo.ai",
